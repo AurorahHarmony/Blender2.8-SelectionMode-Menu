@@ -1,9 +1,3 @@
-bl_info = {
-        "name": "Selection Mode Pie",
-        "category": "Mesh",
-        "author": "Aurorah Harmony - Scriptronix"
-        }
-
 import bpy
 from bpy.types import Menu, Operator
 
@@ -82,3 +76,12 @@ if __name__ == "__main__":
 
     bpy.ops.wm.call_menu_pie(name="Pie_MT_SelectionMode")
 	
+	
+bl_info = {
+    "name": "Selection Mode Pie",
+    "author": "Aurorah - Scriptronix Studios",
+    "version": (1, 0, 0),
+    "blender": (2, 80, 0),
+    "description": "a more descriptive text of what your addon does",
+    "category": "User Interface"
+}
