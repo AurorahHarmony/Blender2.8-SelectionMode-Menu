@@ -64,8 +64,17 @@ def register():
     bpy.utils.register_class(WireMode)
     bpy.utils.register_class(SolidMode)
     bpy.utils.register_class(RenderedMode)
+	
+    wm = bpy.context.window_manager
+    km = wm.keyconfigs.addon.keymaps.new(name='3D View', space_type='VIEW_3D')
+    kmi = km.keymap_items.new("wm.call_menu_pie", "RIGHTMOUSE", "PRESS").properties.name = "PIE_MT_SELECTIONMODE"
 
 def unregister():
+    
+    wm = bpy.context.window_manager
+    km = wm.keyconfigs.addon.keymaps.new(name='3D View', space_type='VIEW_3D')
+    kmi = km.keymap_items.new("wm.call_menu_pie", "RIGHTMOUSE", "PRESS").properties.name = "PIE_MT_SELECTIONMODE"
+	
     bpy.utils.unregister_class(RenderedMode)
     bpy.utils.unregister_class(SolidMode)
     bpy.utils.unregister_class(WireMode)
