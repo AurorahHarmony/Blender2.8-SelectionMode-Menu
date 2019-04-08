@@ -49,16 +49,13 @@ class Pie_MT_SelectionMode(Menu):
         pie = layout.menu_pie()
         pie.operator("mesh.select_mode", text="Vertex", icon='VERTEXSEL').type = 'VERT'
         pie.operator("mesh.select_mode", text="Face", icon='FACESEL').type = 'FACE'
-		pie.operator("solid.mode", text="Solid", icon="SHADING_SOLID")
+        pie.operator("solid.mode", text="Solid", icon="SHADING_SOLID")
         pie.operator("mesh.select_mode", text="Edge", icon='EDGESEL').type = 'EDGE'
         pie.operator("object.mode_set", text="Object", icon='OBJECT_DATAMODE').mode = 'OBJECT'
         pie.operator("object.mode_set", text="Edit", icon='EDITMODE_HLT').mode = 'EDIT'
         pie.operator("wire.mode", text="Wireframe", icon="SHADING_WIRE")
         pie.operator("rendered.mode", text="Rendered", icon="SHADING_RENDERED")
 
-
-
-        
 def register():
     bpy.utils.register_class(Pie_MT_SelectionMode)
     bpy.utils.register_class(WireMode)
